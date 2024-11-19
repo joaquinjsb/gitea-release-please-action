@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.5](https://github.com/joaquinjsb/gitea-release-please-action/compare/v4.1.4...v4.1.5) (2024-11-19)
+
+
+### Bug Fixes
+
+* **deps:** bump release-please to 16.15.1 ([b841b7d](https://github.com/joaquinjsb/gitea-release-please-action/commit/b841b7d81440597c89be003bc1984a3d18008701))
+
 ## [4.1.4](https://github.com/googleapis/release-please-action/compare/v4.1.3...v4.1.4) (2024-11-19)
 
 
