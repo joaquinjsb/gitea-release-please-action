@@ -24,7 +24,7 @@ Automate releases with Conventional Commit Messages.
      release-please:
        runs-on: ubuntu-latest
        steps:
-         - uses: googleapis/release-please-action@v4
+         - uses: joaquinjsb/release-please-action@v4
            with:
              # this assumes that you have created a personal access token
              # (PAT) and configured it as a GitHub action secret named
@@ -53,7 +53,7 @@ and then configure this action as follows:
 ```yaml
 #...(same as above)
 steps:
-  - uses: googleapis/release-please-action@v4
+  - uses: joaquinjsb/release-please-action@v4
     with:
       # this assumes that you have created a personal access token
       # (PAT) and configured it as a GitHub action secret named

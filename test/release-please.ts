@@ -21,7 +21,7 @@ import * as nock from 'nock';
 import {RestoreFn} from 'mocked-env';
 import mockedEnv from 'mocked-env';
 
-import {Manifest, GitHub} from 'release-please';
+import {Manifest, GitHub} from '@joaquinjsb/release-please';
 // As defined in action.yml
 
 const DEFAULT_INPUTS: Record<string, string> = {
