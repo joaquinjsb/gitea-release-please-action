@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.7](https://github.com/joaquinjsb/gitea-release-please-action/compare/v4.1.6...v4.1.7) (2024-11-19)
+
+
+### Bug Fixes
+
+* removed username output ([6bfd6fd](https://github.com/joaquinjsb/gitea-release-please-action/commit/6bfd6fdd5b25a583ef759608d89b3061c07afe94))
+
 ## [4.1.6](https://github.com/joaquinjsb/gitea-release-please-action/compare/v4.1.5...v4.1.6) (2024-11-19)
 
 
