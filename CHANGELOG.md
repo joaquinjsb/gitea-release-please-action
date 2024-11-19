@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.6](https://github.com/joaquinjsb/gitea-release-please-action/compare/v4.1.5...v4.1.6) (2024-11-19)
+
+
+### Bug Fixes
+
+* require git username and password. ([febaa9c](https://github.com/joaquinjsb/gitea-release-please-action/commit/febaa9c6570ce417439b94eed98480d01f056592))
+
 ## [4.1.5](https://github.com/joaquinjsb/gitea-release-please-action/compare/v4.1.4...v4.1.5) (2024-11-19)
 
 
