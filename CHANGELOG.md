@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.3](https://github.com/joaquinjsb/release-please-action/compare/v5.0.0...v4.1.3) (2024-11-19)
+
+
+### Miscellaneous Chores
+
+* release 4.1.3 ([9199518](https://github.com/joaquinjsb/release-please-action/commit/9199518432e0295c7fb04e312775508bec767192))
+
 ## [5.0.0](https://github.com/joaquinjsb/release-please-action/compare/v4.1.4...v5.0.0) (2024-11-19)
 
 
