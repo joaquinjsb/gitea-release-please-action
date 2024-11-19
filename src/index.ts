@@ -33,6 +33,8 @@ interface ActionInputs {
   path?: string;
   githubApiUrl: string;
   githubGraphqlUrl: string;
+  gitUsername?: string;
+  gitPassword?: string;
   configFile?: string;
   manifestFile?: string;
   proxyServer?: string;
@@ -50,6 +52,8 @@ function parseInputs(): ActionInputs {
     releaseType: getOptionalInput('release-type'),
     path: getOptionalInput('path'),
     repoUrl: core.getInput('repo-url') || process.env.GITHUB_REPOSITORY || '',
+    gitUsername: core.getInput('git-username'),
+    gitPassword: core.getInput('git-password'),
     targetBranch: getOptionalInput('target-branch'),
     configFile: core.getInput('config-file') || DEFAULT_CONFIG_FILE,
     manifestFile: core.getInput('manifest-file') || DEFAULT_MANIFEST_FILE,
@@ -149,6 +153,8 @@ function getGitHubInstance(inputs: ActionInputs): Promise<GitHub> {
     repo,
     apiUrl: inputs.githubApiUrl,
     graphqlUrl: inputs.githubGraphqlUrl,
+    gitUsername: inputs.gitUsername,
+    gitPassword: inputs.gitPassword,
     token: inputs.token,
     defaultBranch: inputs.targetBranch,
   };

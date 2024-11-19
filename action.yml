@@ -10,6 +10,14 @@ inputs:
     description: 'what type of release is this, one of (ruby, python, node, terraform-module)'
     required: false
     default: ''
+  git-username:
+    description: 'the username to use when pushing to git'
+    required: false
+    default: ''
+  git-password:
+    description: 'the password to use when pushing to git'
+    required: false
+    default: ''
   path:
     description: "create a release from a path other than the repository's root"
     required: false
