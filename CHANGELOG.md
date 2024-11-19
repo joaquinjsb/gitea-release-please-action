@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.4](https://github.com/joaquinjsb/gitea-release-please-action/compare/v4.1.3...v4.1.4) (2024-11-19)
+
+
+### Bug Fixes
+
+* added git ssh configuration for repo. ([5d1b078](https://github.com/joaquinjsb/gitea-release-please-action/commit/5d1b0787e642a0f0fb33c947887b83249bac81a1))
+
 ## [4.1.3](https://github.com/joaquinjsb/release-please-action/compare/v5.0.0...v4.1.3) (2024-11-19)
 
 
