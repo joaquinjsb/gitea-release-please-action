@@ -122,6 +122,7 @@ export async function main() {
   core.info(`Running release-please version: ${VERSION}`)
   const inputs = parseInputs();
   const github = await getGitHubInstance(inputs);
+  core.info(`using gitusername ${inputs.gitUsername}`);
 
   if (!inputs.skipGitHubRelease) {
     const manifest = await loadOrBuildManifest(github, inputs);
