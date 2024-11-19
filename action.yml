@@ -12,12 +12,10 @@ inputs:
     default: ''
   git-username:
     description: 'the username to use when pushing to git'
-    required: false
-    default: ''
+    required: true
   git-password:
     description: 'the password to use when pushing to git'
-    required: false
-    default: ''
+    required: true
   path:
     description: "create a release from a path other than the repository's root"
     required: false
