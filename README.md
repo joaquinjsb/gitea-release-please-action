@@ -24,7 +24,7 @@ Automate releases with Conventional Commit Messages.
      release-please:
        runs-on: ubuntu-latest
        steps:
-         - uses: joaquinjsb/release-please-action@v4
+         - uses: joaquinjsb/gitea-release-please-action@v4
            with:
              # this assumes that you have created a personal access token
              # (PAT) and configured it as a GitHub action secret named
@@ -41,13 +41,13 @@ Automate releases with Conventional Commit Messages.
 
 2. Merge the above action into your repository and make sure new commits follow
    the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
-   convention, [release-please](https://github.com/googleapis/release-please)
+   convention, [release-please](https://github.com/joaquinjsb/gitea-release-please)
    will start creating Release PRs for you.
 
 ## Advanced Release Configuration
 
 For any advanced configuration, please set up a
-[manifest config](https://github.com/googleapis/release-please/blob/master/docs/manifest-releaser.md)
+[manifest config](https://github.com/joaquinjsb/gitea-release-please/blob/master/docs/manifest-releaser.md)
 and then configure this action as follows:
 
 ```yaml
@@ -138,22 +138,22 @@ Release Please automates releases for the following flavors of repositories:
 | `expo` | An Expo based React Native repository, with a package.json, app.json and CHANGELOG.md |
 | `go`               | Go repository, with a CHANGELOG.md                                                                                                                                                                 |
 | `helm`             | A helm chart repository with a Chart.yaml and a CHANGELOG.md                                                                                                                                       |
-| `java`             | [A strategy that generates SNAPSHOT version after each release](https://github.com/googleapis/release-please/blob/main/docs/java.md)                                                               |
+| `java`             | [A strategy that generates SNAPSHOT version after each release](https://github.com/joaquinjsb/gitea-release-please/blob/main/docs/java.md)                                                               |
 | `krm-blueprint` | [A kpt package, with 1 or more KRM files and a CHANGELOG.md](https://github.com/GoogleCloudPlatform/blueprints/tree/main/catalog/project) |
-| `maven`            | [Strategy for Maven projects, generates SNAPSHOT version after each release and updates `pom.xml` automatically](https://github.com/googleapis/release-please/blob/main/docs/java.md)              |
+| `maven`            | [Strategy for Maven projects, generates SNAPSHOT version after each release and updates `pom.xml` automatically](https://github.com/joaquinjsb/gitea-release-please/blob/main/docs/java.md)              |
 | `node`             | [A Node.js repository, with a package.json and CHANGELOG.md](https://github.com/yargs/yargs)                                                                                                       |
 | `ocaml`            | [An OCaml repository, containing 1 or more opam or esy files and a CHANGELOG.md](https://github.com/grain-lang/binaryen.ml)                                                                        |
-| `python`           | [A Python repository, with a setup.py, setup.cfg, version.py and CHANGELOG.md](https://github.com/googleapis/python-storage) and optionally a pyproject.toml and a &lt;project&gt;/\_\_init\_\_.py |
+| `python`           | [A Python repository, with a setup.py, setup.cfg, version.py and CHANGELOG.md](https://github.com/joaquinjsb/gitea-python-storage) and optionally a pyproject.toml and a &lt;project&gt;/\_\_init\_\_.py |
 | `php`              | [A php composer package with composer.json and CHANGELOG.md](https://github.com/setnemo/asterisk-notation)                                                                                         |
 | `ruby`             | [A Ruby repository, with version.rb and CHANGELOG.md](https://github.com/google/google-id-token)                                                                                                   |
 | `rust`             | A Rust repository, with a Cargo.toml (either as a crate or workspace) and a CHANGELOG.md                                                                                                           |
 | `sfdx`             | A repository with a [sfdx-project.json](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) and a CHANGELOG.md                                        |
-| `simple`           | [A repository with a version.txt and a CHANGELOG.md](https://github.com/googleapis/gapic-generator)                                                                                                |
+| `simple`           | [A repository with a version.txt and a CHANGELOG.md](https://github.com/joaquinjsb/gitea-gapic-generator)                                                                                                |
 | `terraform-module` | [A terraform module, with a version in the README.md, and a CHANGELOG.md](https://github.com/terraform-google-modules/terraform-google-project-factory)                                            |
 
-New types of releases can be [added here](https://github.com/googleapis/release-please/tree/main/src/strategies).
+New types of releases can be [added here](https://github.com/joaquinjsb/gitea-release-please/tree/main/src/strategies).
 
-> You can also find them in the [release-please repository](https://github.com/googleapis/release-please/tree/main#strategy-language-types-supported).
+> You can also find them in the [release-please repository](https://github.com/joaquinjsb/gitea-release-please/tree/main#strategy-language-types-supported).
 
 ## Outputs
 
@@ -164,8 +164,8 @@ New types of releases can be [added here](https://github.com/googleapis/release-
 | `releases_created` | `true` if any release was created, `false` otherwise                                                                                                              |
 | `paths_released`   | A JSON string of the array of paths that had releases created (`[]` if )                                                                                          |
 | `prs_created`      | `true` if any pull request was created or updated                                                                                                                 |
-| `pr`               | A JSON string of the [PullRequest object](https://github.com/googleapis/release-please/blob/main/src/pull-request.ts#L15) (unset if no release created)           |
-| `prs`              | A JSON string of the array of [PullRequest objects](https://github.com/googleapis/release-please/blob/main/src/pull-request.ts#L15) (unset if no release created) |
+| `pr`               | A JSON string of the [PullRequest object](https://github.com/joaquinjsb/gitea-release-please/blob/main/src/pull-request.ts#L15) (unset if no release created)           |
+| `prs`              | A JSON string of the array of [PullRequest objects](https://github.com/joaquinjsb/gitea-release-please/blob/main/src/pull-request.ts#L15) (unset if no release created) |
 
 ### Root component outputs
 
@@ -255,7 +255,7 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - uses: googleapis/release-please-action@v4
+      - uses: joaquinjsb/gitea-release-please-action@v4
         with:
           release-type: node
           # The short ref name of the branch or tag that triggered
@@ -278,7 +278,7 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - uses: googleapis/release-please-action@v4
+      - uses: joaquinjsb/gitea-release-please-action@v4
         id: release
         with:
           release-type: node
@@ -325,7 +325,7 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - uses: googleapis/release-please-action@v4
+      - uses: joaquinjsb/gitea-release-please-action@v4
         id: release
         with:
           release-type: node
@@ -335,7 +335,7 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git remote add gh-token "https://${{ secrets.GITHUB_TOKEN }}@github.com/googleapis/release-please-action.git"
+          git remote add gh-token "https://${{ secrets.GITHUB_TOKEN }}@github.com/joaquinjsb/gitea-release-please-action.git"
           git tag -d v${{ steps.release.outputs.major }} || true
           git tag -d v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }} || true
           git push origin :v${{ steps.release.outputs.major }} || true
@@ -362,7 +362,7 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - uses: googleapis/release-please-action@v4
+      - uses: joaquinjsb/gitea-release-please-action@v4
         id: release
         with:
           release-type: node
