@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 name: release-please
 env:
-  ACTION_NAME: release-please-action
+  ACTION_NAME: gitea-release-please-action
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,7 +23,7 @@ jobs:
       with:
         command: pr
         upstream_repo: release-please-action
-        upstream_owner: googleapis
+        upstream_owner: joaquinjsb
         description: Build dist
         title: "chore: build dist"
         message: "chore: build dist"
@@ -49,7 +49,7 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git remote add gh-token "https://${{ secrets.GITHUB_TOKEN}}@github.com/googleapis/release-please-action.git"
+          git remote add gh-token "https://${{ secrets.GITHUB_TOKEN}}@github.com/joaquinjsb/release-please-action.git"
           git tag -d v${{ steps.release.outputs.major }} || true
           git tag -d v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }} || true
           git push origin :v${{ steps.release.outputs.major }} || true
