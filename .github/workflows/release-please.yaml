@@ -22,7 +22,7 @@ jobs:
       uses: googleapis/code-suggester@v4
       with:
         command: pr
-        upstream_repo: release-please-action
+        upstream_repo: gitea-release-please-action
         upstream_owner: joaquinjsb
         description: Build dist
         title: "chore: build dist"
