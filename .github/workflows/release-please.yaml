@@ -73,5 +73,5 @@ jobs:
         with:
           token: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
           release-type: node
-          fork: true
+          fork: false
           skip-github-release: true
