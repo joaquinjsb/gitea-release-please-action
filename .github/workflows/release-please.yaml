@@ -34,7 +34,7 @@ jobs:
           branch: build-dist
           force: true
           git_dir: .
-          fork: true
+          fork: false
         env:
           ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
   release-please-release:
