@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.10](https://github.com/joaquinjsb/gitea-release-please-action/compare/v4.1.9...v4.1.10) (2025-09-26)
+
+
+### Bug Fixes
+
+* **deps:** bump release-please to 16.15.6 ([aff8703](https://github.com/joaquinjsb/gitea-release-please-action/commit/aff870376f15e72f8ca810ad6fb3e7a31ea1bf8c))
+
 ## [4.1.9](https://github.com/joaquinjsb/gitea-release-please-action/compare/v4.1.8...v4.1.9) (2025-09-16)
 
 
